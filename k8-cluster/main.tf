@@ -9,7 +9,6 @@ terraform {
 
 provider "azurerm" {
   features {}
-  subscription_id = "<------provide subscription id--------->"
 }
 
 resource "azurerm_resource_group" "main" {
@@ -25,8 +24,8 @@ resource "azurerm_kubernetes_cluster" "main" {
 
   default_node_pool {
     name = "default"
-    node_count = 3
-    vm_size = "Standard_D2_v2"
+    node_count = 2
+    vm_size = "Standard_B2s"
   }
   
   addon_profile {
