@@ -32,9 +32,6 @@ resource "azurerm_kubernetes_cluster" "main" {
     http_application_routing {
       enabled = true
     }
-    kube_dashboard {
-      enabled = true
-    }
   }
 
   identity {
